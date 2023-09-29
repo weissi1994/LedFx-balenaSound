@@ -1,26 +1,31 @@
-version: "1.3.0"
-slug: "ledfx-balena-sound"
-name: "LedFx-balenaSound"
-type: "sw.application"
+name: balenaSound
+type: sw.application
+description: >-
+  Build a single or multi-room streamer for an existing audio device
+  using a Raspberry Pi! Supports Bluetooth, Airplay2 and Spotify Connect
+fleetcta: Sounds good
+post-provisioning: >-
+  ## Usage instructions
 assets:
   repository:
     type: blob.asset
     data:
       url: 'https://github.com/weissi1994/LedFx-balenaSound'
+  logo:
+    type: blob.asset
+    data:
+      url: >-
+        https://raw.githubusercontent.com/balena-labs-projects/balena-sound/master/logo.png
 data:
-  description: "LedFx and balenaSound With One Click!"
-  defaultDeviceType: "raspberry-pi"
   applicationEnvironmentVariables:
-    - SOUND_SUPERVISOR_PORT: 8080
-    - SOUND_VOLUME: 100
-    - SOUND_DISABLE_SPOTIFY: 1
-    - SOUND_DISABLE_UPNP: 1
-    - SOUND_DEVICE_NAME: "LedFx"
-    - BLUETOOTH_DEVICE_NAME: "LedFx"
+    - SOUND_VOLUME: 75
+    - AUDIO_OUTPUT: AUTO
+  defaultDeviceType: raspberry-pi
   supportedDeviceTypes:
-    - "raspberry-pi"
-    - "raspberry-pi2"
-    - "raspberrypi3"
-    - "raspberrypi4-64"
-    - "fincm3"
-    - "intel-nuc"
+    - raspberry-pi
+    - raspberry-pi2
+    - raspberrypi3
+    - raspberrypi4-64
+    - fincm3
+    - intel-nuc
+version: 3.9.6
