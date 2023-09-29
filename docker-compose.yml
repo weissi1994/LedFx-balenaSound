@@ -6,8 +6,10 @@ volumes:
 
 services:
   ledfx:
-    image: shirom/ledfx
+    image: shirom/ledfx:latest
     container_name: ledfx
+    network_mode: host
+    privileged: true
     environment:
       - HOST=multiroom-server
     ports:

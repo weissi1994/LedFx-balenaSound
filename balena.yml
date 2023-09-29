@@ -6,7 +6,7 @@ assets:
   repository:
     type: blob.asset
     data:
-      url: 'https://github.com/ShiromMakkad/LedFx-balenaSound'
+      url: 'https://github.com/weissi1994/LedFx-balenaSound'
 data:
   description: "LedFx and balenaSound With One Click!"
   defaultDeviceType: "raspberry-pi"
